@@ -15,6 +15,10 @@ An [Electron](https://www.npmjs.com/package/electron) JS powered app using [Reac
 - Option to focus on app when reminder triggers, or just in the background.
 - `DEV MODE:` Live reload on code changes
 
+## Download
+
+You can download the latest release [here *(v1.0.0)*](https://github.com/mraffaele/remindme/releases/).
+
 ## Usage
 
 Clone the repository
