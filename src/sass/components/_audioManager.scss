@@ -1,0 +1,25 @@
+.audioManagerItems {
+  font-size: 12px;
+
+  &__add {
+    margin: 10px 0 30px;
+    text-align: center;
+  }
+}
+
+.audioManagerItem {
+  align-items: center;
+  display: flex;
+  background: $color-stripeA;
+  border-bottom: 1px solid $color-white;
+  padding: 10px;
+
+  &__name {
+    flex: 1;
+    margin: 0;
+  }
+
+  &:nth-child(odd) {
+    background: $color-stripeB;
+  }
+}

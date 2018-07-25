@@ -1,0 +1,155 @@
+.btn {
+  appearance: none;
+  background: $color-action;
+  border: 0;
+  border-radius: 3px;
+  color: $color-white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  outline: none;
+  padding: 10px;
+  vertical-align: middle;
+  -webkit-appearance: none;
+
+  &:hover {
+    background: darken($color-action, 5);
+  }
+
+  &--alt {
+    background: $color-success;
+
+    &:hover {
+      background: darken($color-success, 5);
+    }
+  }
+
+  &--play {
+    height: 30px;
+    position: relative;
+    width: 30px;
+
+    &:before,
+    &:after {
+      color: $color-white;
+      content: " ";
+      display: block;
+      left: 50%;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: 100ms opacity linear;
+    }
+
+    &:after {
+      background: transparent;
+      border-color: transparent transparent transparent $color-white;
+      border-style: solid;
+      border-width: 8px 0 8px 10px;
+      height: 16px;
+      opacity: 1;
+      width: 0;
+    }
+
+    &:before {
+      background: $color-white;
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+  &--stop {
+    background: $color-warning;
+
+    &:before {
+      opacity: 1;
+    }
+
+    &:after {
+      opacity: 0;
+    }
+
+    &:hover {
+      background: darken($color-warning, 5);
+    }
+  }
+
+  &--delete {
+    background: $color-error;
+    height: 30px;
+    position: relative;
+    width: 30px;
+
+    &:after,
+    &:before {
+      background: $color-white;
+      content: " ";
+      display: block;
+      height: 16px;
+      left: 14px;
+      position: absolute;
+      top: 8px;
+      transform: rotate(45deg);
+      transform-origin: center;
+      width: 2px;
+    }
+
+    &:before {
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      background: darken($color-error, 5);
+    }
+  }
+
+  &--add {
+    height: 30px;
+    position: relative;
+    width: 30px;
+
+    &:after,
+    &:before {
+      background: white;
+      content: " ";
+      display: block;
+      height: 16px;
+      left: 14px;
+      position: absolute;
+      top: 7px;
+      transform: rotate(0deg);
+      transform-origin: center;
+      width: 2px;
+    }
+
+    &:before {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &--edit {
+    font-size: 10px;
+  }
+
+  &--text {
+    background: none;
+    color: $color-text;
+    text-decoration: underline;
+    font-weight: 700;
+
+    &:hover {
+      background: none;
+      color: $color-textAlt;
+    }
+  }
+
+  &--disabled {
+    cursor: default;
+    opacity: 0.3;
+  }
+
+  + .btn {
+    margin-left: 10px;
+  }
+}

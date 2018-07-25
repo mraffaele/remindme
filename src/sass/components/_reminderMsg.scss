@@ -1,0 +1,45 @@
+.reminderMsg {
+  align-items: center;
+  background: $color-active;
+  color: $color-white;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  &__title {
+    display: inline-block;
+    font-size: 24px;
+    margin: 0;
+    position: relative;
+  }
+
+  &__desc {
+    margin: 10px 0 20px;
+  }
+
+  &__cycles {
+    align-items: center;
+    background: $color-success;
+    border-radius: 15px;
+    color: $color-white;
+    display: flex;
+    font-size: 12px;
+    height: 30px;
+    justify-content: center;
+    line-height: 12px;
+    position: absolute;
+    right: -35px;
+    top: -10px;
+    width: 30px;
+  }
+
+  .btn--text {
+    color: $color-white;
+  }
+}

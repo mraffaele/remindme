@@ -1,0 +1,35 @@
+@mixin gradientAnimVertical($time, $args...) {
+  background: linear-gradient(180deg, $args);
+  background-size: 500% 500%;
+  animation: gradientAnimVertical $time ease infinite;
+}
+
+@mixin gradientAnimHorizontal($time, $args...) {
+  background: linear-gradient(270deg, $args);
+  background-size: 500% 500%;
+  animation: gradientAnimHorizontal $time ease infinite;
+}
+
+@keyframes gradientAnimVertical {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+
+@keyframes gradientAnimHorizontal {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

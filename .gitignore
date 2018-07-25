@@ -1,0 +1,9 @@
+node_modules
+dist
+/*.mp3
+release-builds
+/app.js
+/index.html
+npm-debug.log
+
+.DS_STORE

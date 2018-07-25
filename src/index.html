@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div id="app">
+        <style>
+            .loading {
+                align-items: center;
+                cursor: pointer;
+                color: #fff;
+                font-family: Arial, Helvetica, sans-serif;
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                left: 0;
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+        </style>
+        <div class="loading">Loading.</div>
+    </div>
+
+    <% if (htmlWebpackPlugin.options.env === "development") { %>
+        <script>
+            require('electron-connect').client.create()
+        </script>
+        <% } %>
+</body>
+
+</html>

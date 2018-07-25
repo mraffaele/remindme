@@ -1,0 +1,70 @@
+.switch {
+  border: 2px solid $color-white;
+  border-radius: 3px;
+  box-shadow: 0 0 3px rgba($color-black, 0.2);
+  overflow: hidden;
+  position: relative;
+  width: 70px;
+
+  &__checkbox {
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    opacity: 0;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    &:checked + .switch__label {
+      &:before {
+        background: $color-action;
+        transform: translateX(38px);
+      }
+
+      &:after {
+        content: "ON";
+        transform: translateX(0px);
+      }
+    }
+  }
+
+  &__label {
+    background: $color-white;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    height: 100%;
+    line-height: 12px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+
+    &:before {
+      background: $color-inactive;
+      content: " ";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: 150ms transform ease-out;
+      transform: translateX(0px);
+      width: 30px;
+      z-index: 1;
+    }
+
+    &:after {
+      align-items: center;
+      content: "OFF";
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      transform: translateX(30px);
+      position: absolute;
+      top: 0;
+      width: 40px;
+      z-index: 0;
+    }
+  }
+}

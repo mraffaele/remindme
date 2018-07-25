@@ -1,0 +1,90 @@
+.form {
+  &__field {
+    margin: 10px 0 20px;
+
+    &--flex {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+
+      .form__label {
+        flex: 0 0 180px;
+      }
+    }
+
+    &--invalid {
+      .form__text {
+        border-bottom-color: $color-error;
+      }
+    }
+  }
+
+  &__text {
+    border: 0;
+    border-bottom: 1px solid $color-inactive;
+    border-radius: none;
+    display: block;
+    padding: 5px 10px 0 0;
+    outline: none;
+    width: 100%;
+
+    &:focus {
+      border-color: $color-active;
+    }
+
+    &--area {
+      height: 60px;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 3px;
+  }
+
+  &__help {
+    color: $color-textAlt;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 400;
+
+    a {
+      color: $color-textAlt;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  &__radio {
+    align-items: center;
+    background: $color-stripeA;
+    margin-bottom: 1px;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    position: relative;
+
+    &:nth-child(odd) {
+      background: $color-stripeB;
+    }
+
+    &--isActive.form__radio {
+      color: $color-white;
+      background: $color-action;
+    }
+  }
+
+  &__radioBtn {
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+}
