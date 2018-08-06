@@ -17,7 +17,7 @@ An [Electron](https://www.npmjs.com/package/electron) JS powered app using [Reac
 
 ## Download
 
-You can download the latest release [here *(v1.0.0)*](https://github.com/mraffaele/remindme/releases/).
+You can download the latest release [here _(v1.0.1)_](https://github.com/mraffaele/remindme/releases/).
 
 ## Usage
 

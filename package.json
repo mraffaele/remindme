@@ -1,6 +1,6 @@
 {
   "name": "remindme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple desktop application allowing you to create and schedule re-occurring personal reminders",
   "author": "Michael Raffaele <michael@mraffaele.com> (http://github.com/mraffaele)",
   "homepage": "https://github.com/mraffaele/remindme",

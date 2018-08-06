@@ -23,13 +23,13 @@ app.on("ready", () => {
   win.loadFile("index.html");
   Menu.setApplicationMenu(menu);
 
-  ipcMain.on("minimiseApp", () => win.minimize());
-  ipcMain.on("notifyFocus", () => win.setAlwaysOnTop(true));
-  ipcMain.on("notifyBlur", (evt, minimise) => {
+  ipcMain.on("minimiseApp", () => {
+    win.minimize();
     win.setAlwaysOnTop(false);
-    if (minimise) {
-      win.minimize();
-    }
+  });
+  ipcMain.on("notifyFocus", () => {
+    win.setAlwaysOnTop(true);
+    win.show();
   });
 
   win.on("closed", () => app.quit());
@@ -117,7 +117,7 @@ const menuTpl = () => {
     }
   ];
 
-  if (process.platform === "darwin") {    
+  if (process.platform === "darwin") {
     menu[0].submenu.push({
       label: "Quit",
       role: "quit",
